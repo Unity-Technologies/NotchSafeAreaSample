@@ -10,11 +10,6 @@ public class PlatformLogoSwitch : MonoBehaviour {
     public UnityEngine.UI.Image iOS;
     private string CurrentOS="";
     
-	void Start () {
-        //CurrentOS = SystemInfo.operatingSystem;
-        //SetPlatform(0);
-    }
-
     // Update is called once per frame
     void Update () {
         //Check if something has changed
