@@ -76,15 +76,15 @@ public class CanvasHelper : MonoBehaviour
         safeAreaTransform.anchorMin = anchorMin;
         safeAreaTransform.anchorMax = anchorMax;
 
-        //Debug.Log(
-        //"Applied SafeArea:" +
-        // "\n Screen.orientation: " + Screen.orientation +
-        // "\n Screen.safeArea.position: " + Screen.safeArea.position.ToString() +
-        // "\n Screen.safeArea.size: " + Screen.safeArea.size.ToString() +
-        // "\n Screen.width / height: (" + Screen.width.ToString() + ", " + Screen.height.ToString() + ")" +
-        // "\n canvas.pixelRect.size: " + canvas.pixelRect.size.ToString() +
-        // "\n anchorMin: " + anchorMin.ToString() +
-        // "\n anchorMax: " + anchorMax.ToString());
+        Debug.Log(
+        "Applied SafeArea:" +
+         "\n Screen.orientation: " + Screen.orientation +
+         "\n Screen.safeArea.position: " + Screen.safeArea.position.ToString() +
+         "\n Screen.safeArea.size: " + Screen.safeArea.size.ToString() +
+         "\n Screen.width / height: (" + Screen.width.ToString() + ", " + Screen.height.ToString() + ")" +
+         "\n canvas.pixelRect.size: " + canvas.pixelRect.size.ToString() +
+         "\n anchorMin: " + anchorMin.ToString() +
+         "\n anchorMax: " + anchorMax.ToString());
     }
 
     void OnDestroy()

@@ -27,12 +27,14 @@ public class notchDisplay : MonoBehaviour
         // Screen.cutouts maps to Android native API. On iOS, no native API but Unity >> xCode project
         // contains notch definitions in the 'Unity.mm' file
         StringBuilder output = new StringBuilder();
-        output.Append($"Resolution {res.width}x{res.height}\n safeArea: {safeArea.x}:{safeArea.y} {safeArea.width}x{safeArea.height}\n" );
-
+        output.Append($"Resolution {res.width}x{res.height}\n");
+        output.Append($"safeArea: {safeArea.x}:{safeArea.y} {safeArea.width}x{safeArea.height}\n") ;
+        //Check for notch(es)
         if (cutouts.Length > 0)
         {
             foreach (var c in cutouts)
             {
+                //if any draw Red and display coordinates
                 GUIDrawRect(c, Color.red, "");
                 output.Append($"cutout x:{c.x} y:{c.y} {c.width}x{c.height}\n");
             }              
@@ -41,15 +43,12 @@ public class notchDisplay : MonoBehaviour
         {
             output.Append("No cutouts detected\n");
         }
-
-
-
-        //System Info:
+        //Add rest of System Info:
         output.Append($"OS: {SystemInfo.operatingSystem}, familly:{SystemInfo.operatingSystemFamily}\n");
         output.Append($"Device Model: {SystemInfo.deviceModel}\n");
         output.Append($"Processor: {SystemInfo.processorType}\n");
         output.Append($"Gyro?: {SystemInfo.supportsGyroscope}\n");
-
+        //Draw Safe Area + System Info
         GUIDrawRect(safeArea, Color.green, output.ToString());
     }
 
@@ -63,9 +62,10 @@ public class notchDisplay : MonoBehaviour
     }
 }
 
-//Unity.mm file
-//void ReportSafeAreaChangeForView(UIView* view)
-//{
+// iOS notch definitions
+// Unity.mm file
+// void ReportSafeAreaChangeForView(UIView* view)
+// {
 //    CGRect safeArea = ComputeSafeArea(view);
 //    UnityReportSafeAreaChange(safeArea.origin.x, safeArea.origin.y,
 //        safeArea.size.width, safeArea.size.height);
