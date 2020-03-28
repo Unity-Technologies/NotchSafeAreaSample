@@ -695,7 +695,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 36
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -705,7 +705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: BACK
 --- !u!222 &878782198
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1955,6 +1955,7 @@ GameObject:
   - component: {fileID: 1787441025}
   - component: {fileID: 1787441024}
   - component: {fileID: 1787441023}
+  - component: {fileID: 1787441026}
   m_Layer: 5
   m_Name: ButtonRed
   m_TagString: Untagged
@@ -2061,6 +2062,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787441021}
   m_CullTransparentMesh: 0
+--- !u!114 &1787441026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787441021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6dd3139e9aa8449b459ce87923f803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Menu
 --- !u!1 &2082378511
 GameObject:
   m_ObjectHideFlags: 0

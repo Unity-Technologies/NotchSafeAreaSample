@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Menu.unity
+    guid: 5fe3ca3356a0cb04a93f94bdc7241d3c
+  - enabled: 1
     path: Assets/DisplayNotchSafeArea.unity
     guid: 9956bb6ddf36518498cec586ae791d29
+  - enabled: 1
+    path: Assets/SafeAreaControl.unity
+    guid: 55bee3a90d74bdd48ab094395274a112
   m_configObjects: {}
