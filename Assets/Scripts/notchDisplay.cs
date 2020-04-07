@@ -52,15 +52,6 @@ public class notchDisplay : MonoBehaviour
         //Draw Safe Area + System Info
         GUIDrawRect(safeArea, Color.green, output.ToString());
 
-        // Make a background box
-        GUI.Box(new Rect(10, 10, 200, 180), "Menu");
-        //Draw Back button
-        if(GUI.Button(new Rect(20,40,160,40), "BACK"))
-        //if (GUILayout.Button("BACK"))
-        {
-            Debug.Log("Clicked Button");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
-        }
     }
 
     public static void GUIDrawRect(Rect position, Color color, string text)

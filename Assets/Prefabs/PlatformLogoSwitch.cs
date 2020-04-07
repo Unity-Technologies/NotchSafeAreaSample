@@ -12,21 +12,13 @@ public class PlatformLogoSwitch : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-        //Check if something has changed
+        //Check if OS has changed
         if (CurrentOS != SystemInfo.operatingSystem) 
         {
             CurrentOS = SystemInfo.operatingSystem;
-            if (CurrentOS.StartsWith("Android"))
-            {
-                SetPlatform(1);
-            } else 
-            if (CurrentOS.StartsWith("iOS"))
-            {
-                SetPlatform(2);
-            } else 
-            {
-                SetPlatform(0);
-            }
+            int platID = (CurrentOS.StartsWith("Android") == true) ?  1 : 
+                         (CurrentOS.StartsWith("iOS") == true) ? 2 : 0;
+            SetPlatform(platID);
         }
 	}
 
