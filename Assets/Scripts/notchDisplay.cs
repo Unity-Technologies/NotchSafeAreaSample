@@ -25,7 +25,8 @@ public class notchDisplay : MonoBehaviour
         var res = Screen.currentResolution;
         var safeArea = Screen.safeArea;
         var cutouts = Screen.cutouts;
-        // Screen.cutouts maps to Android native API. On iOS, no native API but Unity >> xCode project
+        // Screen.cutouts maps to Android native API. 
+        // On iOS, no native API but Unity >> xCode project
         // contains notch definitions in the 'Unity.mm' file
         StringBuilder output = new StringBuilder();
         output.Append($"Resolution {res.width}x{res.height}\n");
