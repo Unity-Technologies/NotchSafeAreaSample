@@ -100,7 +100,7 @@
     "SystemInfo": {
         "deviceModel": "samsung SM-F900F",
         "deviceType": 1,
-        "operatingSystem": "Android OS 10 / API-29 (QP1A.190711.020/F900FXXU3BTCD)",
+        "operatingSystem": "Android OS 10 / API-29",
         "operatingSystemFamily": 0,
         "processorCount": 8,
         "processorFrequency": 5683,
@@ -121,7 +121,7 @@
                 "graphicsDeviceID": 0,
                 "graphicsDeviceVendorID": 0,
                 "graphicsUVStartsAtTop": false,
-                "graphicsDeviceVersion": "OpenGL ES 3.2 V@415.0 (GIT@128c575, I000594fe7d, 1580716718) (Date:02/02/20)",
+                "graphicsDeviceVersion": "OpenGL ES 3.2",
                 "graphicsShaderLevel": 50,
                 "graphicsMultiThreaded": true,
                 "renderingThreadingMode": 0,
