@@ -4,3 +4,5 @@
 This project was used during the Unite Now session "Speeding Up Your Workflow for Mobile Apps", featuring  the new Device Simulator.
 [Watch the recording (demo starts at 8;04)](https://youtu.be/7wVhQfdO-pc?t=484)
 
+
+![Device Simulator](./DeviceSimulatorRoadMap2020Q1.gif)
