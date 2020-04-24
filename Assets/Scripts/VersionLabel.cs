@@ -6,7 +6,7 @@ using UnityEngine.UI;
     [RequireComponent(typeof(Text))]
     public class VersionLabel : MonoBehaviour
     {
-        private void Awake()
+        void Awake()
         {
             var textToDisplay = new StringBuilder();
             var label = GetComponent<Text>();
@@ -16,6 +16,7 @@ using UnityEngine.UI;
             textToDisplay.Append(Application.unityVersion);
 
             label.text = textToDisplay.ToString();
+        Debug.Log($"Version: {textToDisplay.ToString()}");
         }
     }
 

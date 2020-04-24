@@ -50,6 +50,9 @@ public class notchDisplay : MonoBehaviour
         output.Append($"Device Model: {SystemInfo.deviceModel}\n");
         output.Append($"Processor: {SystemInfo.processorType}\n");
         output.Append($"Gyro?: {SystemInfo.supportsGyroscope}\n");
+        output.Append($"Culture?: {System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToString()}\n");
+       
+
         //Draw Safe Area + System Info
         GUIDrawRect(safeArea, Color.green, output.ToString());
 
