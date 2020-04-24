@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class ProcessDeepLinkMngr : MonoBehaviour
 {
     public static ProcessDeepLinkMngr Instance { get; private set; }
+    public string deeplinkURL;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-            
+                    
             Application.deepLinkActivated += onDeepLinkActivated;
 
             if (!String.IsNullOrEmpty(Application.absoluteURL))
@@ -22,7 +22,9 @@ public class ProcessDeepLinkMngr : MonoBehaviour
                 // cold start and Application.absoluteURL not null
                 onDeepLinkActivated(Application.absoluteURL);
                 Debug.Log("AbsoluteURL: " + Application.absoluteURL);
-             }
+            }
+            else deeplinkURL = "[none]";
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -36,6 +38,7 @@ public class ProcessDeepLinkMngr : MonoBehaviour
         // in this case url = Application.absoluteURL  
         // In real implementation Check valitidy of URL before any processing 
         Debug.Log($"Started with onDeepLinkActivated:{url}");
+        deeplinkURL = url;
         //hardcoding loading a scene to test DeepLink activation
         SceneManager.LoadScene("SafeAreaControl");
 

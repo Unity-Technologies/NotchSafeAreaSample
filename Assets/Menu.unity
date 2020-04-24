@@ -546,6 +546,7 @@ GameObject:
   - component: {fileID: 662076600}
   - component: {fileID: 662076603}
   - component: {fileID: 662076602}
+  - component: {fileID: 662076601}
   m_Layer: 5
   m_Name: DeepLink
   m_TagString: Untagged
@@ -572,6 +573,18 @@ RectTransform:
   m_AnchoredPosition: {x: 439.74, y: 10}
   m_SizeDelta: {x: 423.7, y: 175.2}
   m_Pivot: {x: 1, y: 0}
+--- !u!114 &662076601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662076599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3145faafab00904891c55314af57416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &662076602
 MonoBehaviour:
   m_ObjectHideFlags: 0
