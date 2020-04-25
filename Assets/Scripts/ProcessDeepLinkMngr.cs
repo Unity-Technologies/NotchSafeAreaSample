@@ -13,16 +13,16 @@ public class ProcessDeepLinkMngr : MonoBehaviour
     {
         if (Instance == null)
         {
-            Instance = this;
-                    
+            Instance = this;                 
             Application.deepLinkActivated += onDeepLinkActivated;
 
             if (!String.IsNullOrEmpty(Application.absoluteURL))
             {
-                // cold start and Application.absoluteURL not null
+                // cold start and Application.absoluteURL not null so process Deep Link
                 onDeepLinkActivated(Application.absoluteURL);
                 Debug.Log("AbsoluteURL: " + Application.absoluteURL);
             }
+            // initialize DeepLink Manager global variable
             else deeplinkURL = "[none]";
             DontDestroyOnLoad(gameObject);
         }
@@ -30,18 +30,14 @@ public class ProcessDeepLinkMngr : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
 
     private void onDeepLinkActivated(string url)
     {
-        // in this case url = Application.absoluteURL  
-        Debug.Log($"Started with onDeepLinkActivated:{url}");
         // update DeepLink Manager global variable, so URL can be accessed from anywhere 
         deeplinkURL = url;
 
-        //hardcoding loading a scene to test DeepLink activation
-        // In real implementation Check valitidy of URL before any processing 
+        //Decode the DeepLink url to determine action
         string sceneName = url.Split("?"[0])[1];
         Debug.Log($"Deep Link Scene:{sceneName}");
         bool validScene;
