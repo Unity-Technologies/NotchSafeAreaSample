@@ -5,18 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
-public class ProcessDeepLink : MonoBehaviour
+public class UpdateDeepLink : MonoBehaviour
 {
-    private void Start()
-    {
-        //var label = GetComponent<Text>();
-        //label.text = "[No Deep]";
-              
-    }
-
     private void Update()
-
     {
+        //Get Deep link value from global deeplink manager
         var label = GetComponent<Text>();
         label.text = ProcessDeepLinkMngr.Instance.deeplinkURL;
     }

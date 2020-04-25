@@ -36,11 +36,31 @@ public class ProcessDeepLinkMngr : MonoBehaviour
     private void onDeepLinkActivated(string url)
     {
         // in this case url = Application.absoluteURL  
-        // In real implementation Check valitidy of URL before any processing 
         Debug.Log($"Started with onDeepLinkActivated:{url}");
+        // update DeepLink Manager global variable, so URL can be accessed from anywhere 
         deeplinkURL = url;
+
         //hardcoding loading a scene to test DeepLink activation
-        SceneManager.LoadScene("SafeAreaControl");
+        // In real implementation Check valitidy of URL before any processing 
+        string sceneName = url.Split("?"[0])[1];
+        Debug.Log($"Deep Link Scene:{sceneName}");
+        bool validScene;
+        switch (sceneName)
+        {
+            case "DisplayNotchSafeArea":
+                validScene = true;
+                break;
+            case "SafeAreaControl":
+                validScene = true;
+                break;
+            case "Menu":
+                validScene = true;
+                break;
+            default:
+                validScene = false;
+                break;
+        }
+        if (validScene) SceneManager.LoadScene(sceneName);
 
 
     }
