@@ -23,7 +23,7 @@ public class ProcessDeepLinkMngr : MonoBehaviour
                 Debug.Log("AbsoluteURL: " + Application.absoluteURL);
             }
             // initialize DeepLink Manager global variable
-            else deeplinkURL = "[none]";
+            else deeplinkURL = "[None]";
             DontDestroyOnLoad(gameObject);
         }
         else
