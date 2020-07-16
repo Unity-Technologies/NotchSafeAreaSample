@@ -8,5 +8,6 @@ This project was used during the Unite Now session "Speeding Up Your Workflow fo
 
 ![Device Simulator](./DeviceSimulatorRoadMap2020Q1.gif)
 
-This project also demonstrate how to use [Deep Linking](https://docs.unity3d.com/2019.3/Documentation/Manual/enabling-deep-linking.html).
+This project also demonstrate how to use Deep Linking, see related [blog post](https://blogs.unity3d.com/2020/07/16/add-deep-links-to-your-unity-mobile-apps-for-better-user-experience) and [documentation](https://docs.unity3d.com/2019.3/Documentation/Manual/enabling-deep-linking.html).
+
 ![Deep linking](./deeplinkSlow.gif)
