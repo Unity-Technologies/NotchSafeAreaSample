@@ -4,6 +4,14 @@ using UnityEngine.UI;
 using UnityEngine;
 using System.Text;
 
+// The Device Simulator provides simulated classes, which you can use to test code that responds to device-specific behaviors in the Device Simulator.
+// These simulated classes have the same members as their regular UnityEngine namespace counterparts. 
+// You can use them anywhere in your codebase where you would normally use the regular classes. There is no performance impact, and you can use them in release builds.
+// to convert existing code to use classes from the UnityEngine.Device namespace, it’s best practice to use alias directives
+using Screen = UnityEngine.Device.Screen;
+using Application = UnityEngine.Device.Application;
+using SystemInfo = UnityEngine.Device.SystemInfo;
+
 public class notchDisplay : MonoBehaviour
 {
     // Start is called before the first frame update
